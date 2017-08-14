@@ -1,14 +1,11 @@
-body {
-    background-color: #264d73;
-}
-.intro {
-    margin-top: 1em;
-    position: relative;
-    text-align: center;
-    color: dimgrey;
-}
+
 #banner-text {
+    background-color: #264d73;
     font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    position: fixed;
+    padding: 20px;
+    width: 100%;
     font-size: 200%;
     color: white;
     text-shadow: 0 1px 0 #ccc,
@@ -24,8 +21,58 @@ body {
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
 }
-.nav-link{
-margin-top: 1em;
-font-family: 'Press Start 2P', cursive;
-color: white;
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    background-color: #264d73; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    width:250px;
+    margin-right: 250px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    font-family: 'Press Start 2P', cursive;
+    padding: 20px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+#main{
+    background-color: white;
+    margin-left: 250px;
+    padding-top: 100px;
 }
